@@ -1,0 +1,435 @@
+PS D:\wizard game> echo "# wizard-game" >> README.md
+>> git init
+>> git add README.md
+>> git commit -m "first commit"
+>> git branch -M main
+>> git remote add origin https://github.com/Tony555x/wizard-game.git
+>> git push -u origin main
+Initialized empty Git repository in D:/wizard game/.git/
+[master (root-commit) c4bbbb0] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 248 bytes | 124.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Tony555x/wizard-game.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS D:\wizard game> dotnet new console
+The template "Console App" was created successfully.
+
+Processing post-creation actions...
+Restoring D:\wizard game\wizard game.csproj:
+Restore succeeded.
+
+
+PS D:\wizard game> git add .
+PS D:\wizard game> git commit -m "Create empty project and gitignore"
+[main 9065e28] Create empty project and gitignore
+ 3 files changed, 15 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Program.cs
+ create mode 100644 wizard game.csproj
+PS D:\wizard game> git add .
+PS D:\wizard game> git commit -m "Add game start"
+[main 4aab22f] Add game start
+ 1 file changed, 39 insertions(+), 2 deletions(-)
+PS D:\wizard game> git add .
+PS D:\wizard game> git commit -m "Add base spell class"
+[main 9705988] Add base spell class
+ 1 file changed, 8 insertions(+)
+ create mode 100644 Spell.cs
+PS D:\wizard game> git add .
+PS D:\wizard game> git commit -m "Add character base class"
+[main d1d325d] Add character base class
+ 1 file changed, 20 insertions(+)
+ create mode 100644 Character.cs
+PS D:\wizard game> git add .
+PS D:\wizard game> git commit -m "Add wizard class"
+[main d5d7bc2] Add wizard class
+ 1 file changed, 7 insertions(+)
+ create mode 100644 Wizard.cs
+PS D:\wizard game> git add .
+PS D:\wizard game> git commit -m "Add enemy base class"
+[main 5ebddf4] Add enemy base class
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+ create mode 100644 Enemy.cs
+PS D:\wizard game> git add .
+PS D:\wizard game> git commit -m "Add fireball spell"
+[main 74d0034] Add fireball spell
+ 1 file changed, 10 insertions(+)
+ create mode 100644 Spells/Fireball.cs
+PS D:\wizard game> git add .
+PS D:\wizard game> git commit -m "Add icicle spell"
+[main e91098c] Add icicle spell
+ 1 file changed, 12 insertions(+)
+ create mode 100644 Spells/Icicle.cs
+PS D:\wizard game> dotnet build
+Restore complete (0.3s)
+  wizard game succeeded with 7 warning(s) (2.3s) → bin\Debug\net9.0\wizard game.dll
+    D:\wizard game\Spells\Icicle.cs(3,23): warning CS0108: 'Icicle.Name' hides inherited member 'Spell.Name'. Use the new keyword if hiding was intended.
+    D:\wizard game\Spells\Fireball.cs(3,23): warning CS0108: 'Fireball.Name' hides inherited member 'Spell.Name'. Use the new keyword if hiding was intended.       
+    D:\wizard game\Spells\Fireball.cs(4,23): warning CS0108: 'Fireball.Description' hides inherited member 'Spell.Description'. Use the new keyword if hiding was intended.
+    D:\wizard game\Spells\Fireball.cs(5,20): warning CS0108: 'Fireball.Cost' hides inherited member 'Spell.Cost'. Use the new keyword if hiding was intended.       
+    D:\wizard game\Spells\Icicle.cs(4,23): warning CS0108: 'Icicle.Description' hides inherited member 'Spell.Description'. Use the new keyword if hiding was intended.
+    D:\wizard game\Spells\Icicle.cs(5,20): warning CS0108: 'Icicle.Cost' hides inherited member 'Spell.Cost'. Use the new keyword if hiding was intended.
+    D:\wizard game\Program.cs(19,37): warning CS8604: Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.
+
+Build succeeded with 7 warning(s) in 3.1s
+PS D:\wizard game> git push
+Enumerating objects: 30, done.
+Counting objects: 100% (30/30), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (29/29), 3.70 KiB | 757.00 KiB/s, done.
+Total 29 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/Tony555x/wizard-game.git
+   c4bbbb0..e91098c  main -> main
+PS D:\wizard game>
+Microsoft Windows [Version 10.0.26200.7309]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\anton>history
+'history' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\anton>git status
+warning: could not open directory 'Application Data/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Local Settings/': Permission denied
+warning: could not open directory 'My Documents/': Permission denied
+warning: could not open directory 'NetHood/': Permission denied
+warning: could not open directory 'PrintHood/': Permission denied
+warning: could not open directory 'Recent/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+warning: could not open directory 'Start Menu/': Permission denied
+warning: could not open directory 'Templates/': Permission denied
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        -1.14-windows.xml
+        .Ld2VirtualBox/
+        .VirtualBox/
+        .antigravity/
+        .bash_history
+        .cache/
+        .config/
+        .dotnet/
+        .ftb/
+        .gemini/
+        .gitconfig
+        .idlerc/
+        .ipython/
+        .jdks/
+        .jupyter/
+        .lesshst
+        .librarymanager/
+        .m2/
+        .matplotlib/
+        .mputils/
+        .nuget/
+        .packettracer
+        .platformio/
+        .prefs/
+        .python_history
+        .qiskit/
+        .sonic-pi/
+        .ssh/
+        .templateengine/
+        .viminfo
+        .vscode/
+        3D Objects/
+        AppData/
+        Cisco Packet Tracer 8.2.1/
+        Contacts/
+        Desktop/
+        Documents/
+        Downloads/
+        ExoMine.mdf
+        ExoMine_log.ldf
+        Favorites/
+        Links/
+        Music/
+        NTUSER.DAT
+        NTUSER.DAT{f4963224-74a2-11f0-a59c-c7b39f639de1}.TM.blf
+        NTUSER.DAT{f4963224-74a2-11f0-a59c-c7b39f639de1}.TMContainer00000000000000000001.regtrans-ms
+        NTUSER.DAT{f4963224-74a2-11f0-a59c-c7b39f639de1}.TMContainer00000000000000000002.regtrans-ms
+        OneDrive/
+        PycharmProjects/
+        SOMT.mdf
+        SOMT_log.ldf
+        Saved Games/
+        Searches/
+        Taskboard.mdf
+        Taskboard_log.ldf
+        Tracing/
+        Vet.mdf
+        Vet_log.ldf
+        Videos/
+        VirtualBox VMs/
+        aicalendar.mdf
+        aicalendar_log.ldf
+        curseforge/
+        diplomen.mdf
+        diplomen_log.ldf
+        exomine/
+        grimoireincr.gpr
+        grimoireincr.rep/
+        ntuser.dat.LOG1
+        ntuser.dat.LOG2
+        ntuser.ini
+        refactor.mdf
+        refactor_log.ldf
+        sandboxgame/
+        source/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\anton>d:
+
+D:\>cd "wizard game"
+
+D:\wizard game>git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Spells/Fireball.cs
+        modified:   Spells/Icicle.cs
+        modified:   Spells/Lightning.cs
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Spells/Fireball.cs
+        modified:   Spells/Lightning.cs
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Enemies/
+
+
+D:\wizard game>git add Spells/
+
+D:\wizard game>fit add .
+'fit' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\wizard game>git commit -m "Fix spell base value override"
+[main 088bfb5] Fix spell base value override
+ 3 files changed, 9 insertions(+), 9 deletions(-)
+
+D:\wizard game>git add .
+
+D:\wizard game>git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Enemies/Goblin.cs
+
+
+D:\wizard game>git commit -m "Add goblin enemy"
+[main 6e95a9f] Add goblin enemy
+ 1 file changed, 14 insertions(+)
+ create mode 100644 Enemies/Goblin.cs
+
+D:\wizard game>dotnet build
+Restore complete (0.3s)
+  wizard game succeeded with 2 warning(s) (0.4s) → bin\Debug\net9.0\wizard game.dll
+    D:\wizard game\Program.cs(11,25): warning CS8600: Converting null literal or possible null value to non-nullable type.
+    D:\wizard game\Program.cs(12,38): warning CS8604: Possible null reference argument for parameter 'name' in 'Wizard.Wizard(string name)'.
+
+Build succeeded with 2 warning(s) in 1.3s
+
+D:\wizard game>dotnet build
+Restore complete (0.3s)
+  wizard game failed with 3 error(s) (0.3s)
+    D:\wizard game\Program.cs(28,33): error CS1002: ; expected
+    D:\wizard game\Program.cs(30,61): error CS1002: ; expected
+    D:\wizard game\Program.cs(32,50): error CS1002: ; expected
+
+Build failed with 3 error(s) in 1.2s
+
+D:\wizard game>dotnet build
+Restore complete (0.3s)
+  wizard game failed with 1 error(s) and 2 warning(s) (0.3s)
+    D:\wizard game\Program.cs(22,29): error CS0246: The type or namespace name 'Goblin' could not be found (are you missing a using directive or an assembly reference?)
+    D:\wizard game\Program.cs(11,25): warning CS8600: Converting null literal or possible null value to non-nullable type.
+    D:\wizard game\Program.cs(12,38): warning CS8604: Possible null reference argument for parameter 'name' in 'Wizard.Wizard(string name)'.
+
+Build failed with 1 error(s) and 2 warning(s) in 1.2s
+
+D:\wizard game>dotnet build
+Restore complete (0.3s)
+  wizard game succeeded with 2 warning(s) (0.4s) → bin\Debug\net9.0\wizard game.dll
+    D:\wizard game\Program.cs(12,25): warning CS8600: Converting null literal or possible null value to non-nullable type.
+    D:\wizard game\Program.cs(13,38): warning CS8604: Possible null reference argument for parameter 'name' in 'Wizard.Wizard(string name)'.
+
+Build succeeded with 2 warning(s) in 1.2s
+
+D:\wizard game>dotnet build
+Restore complete (0.3s)
+Tony: 6/10 HP 10/10 MP
+Goblin: 2/5 HP
+Spells:
+1. Fireball
+2. Icicle
+^C
+D:\wizard game>dotnet build
+Restore complete (0.3s)
+  wizard game succeeded with 3 warning(s) (0.4s) → bin\Debug\net9.0\wizard game.dll
+    D:\wizard game\Program.cs(12,25): warning CS8600: Converting null literal or possible null value to non-nullable type.
+    D:\wizard game\Program.cs(13,38): warning CS8604: Possible null reference argument for parameter 'name' in 'Wizard.Wizard(string name)'.
+    D:\wizard game\Program.cs(34,34): warning CS8600: Converting null literal or possible null value to non-nullable type.
+
+Build succeeded with 3 warning(s) in 1.2s
+
+D:\wizard game>git add .
+
+D:\wizard game>git commit -m "Add combat"
+[main 8988c6b] Add combat
+ 2 files changed, 26 insertions(+), 8 deletions(-)
+
+D:\wizard game>git push
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (26/26), 3.28 KiB | 279.00 KiB/s, done.
+Total 26 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 6 local objects.
+To https://github.com/Tony555x/wizard-game.git
+   e91098c..8988c6b  main -> main
+
+D:\wizard game>dotnet build
+Restore complete (0.3s)
+  wizard game succeeded with 3 warning(s) (0.4s) → bin\Debug\net9.0\wizard game.dll
+    D:\wizard game\Program.cs(12,25): warning CS8600: Converting null literal or possible null value to non-nullable type.
+    D:\wizard game\Program.cs(13,38): warning CS8604: Possible null reference argument for parameter 'name' in 'Wizard.Wizard(string name)'.
+    D:\wizard game\Program.cs(34,34): warning CS8600: Converting null literal or possible null value to non-nullable type.
+
+Build succeeded with 3 warning(s) in 1.3s
+
+D:\wizard game>git add .
+
+D:\wizard game>git commit -m "Add combat end"
+[main 007a34c] Add combat end
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+D:\wizard game>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 450 bytes | 450.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Tony555x/wizard-game.git
+   8988c6b..007a34c  main -> main
+
+D:\wizard game>dotnet run
+D:\wizard game\Program.cs(12,25): warning CS8600: Converting null literal or possible null value to non-nullable type.
+D:\wizard game\Program.cs(13,38): warning CS8604: Possible null reference argument for parameter 'name' in 'Wizard.Wizard(string name)'.
+D:\wizard game\Program.cs(34,34): warning CS8600: Converting null literal or possible null value to non-nullable type.
+Wizard Game
+Press any key to start
+^C
+D:\wizard game>git add .
+
+D:\wizard game>git commit -m "Fix writing"
+[main c1ca720] Fix writing
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\wizard game>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Tony555x/wizard-game.git
+   007a34c..c1ca720  main -> main
+
+D:\wizard game>
+D:\wizard game>git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+D:\wizard game>git merge dev
+merge: dev - not something we can merge
+
+D:\wizard game>git branch
+* main
+
+D:\wizard game>git checkout -b dev
+Switched to a new branch 'dev'
+
+D:\wizard game>git add .
+
+D:\wizard game>git commit -m "Add game ending"
+[dev 679be48] Add game ending
+ 1 file changed, 2 insertions(+)
+
+D:\wizard game>git push
+fatal: The current branch dev has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dev
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+D:\wizard game>git push -u origin dev
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/Tony555x/wizard-game/pull/new/dev
+remote:
+To https://github.com/Tony555x/wizard-game.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+D:\wizard game>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+D:\wizard game>git merge dev
+Updating c1ca720..679be48
+Fast-forward
+ Program.cs | 2 ++
+ 1 file changed, 2 insertions(+)
+
+D:\wizard game>git commit -m "merge main"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+D:\wizard game>git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Tony555x/wizard-game.git
+   c1ca720..679be48  main -> main
+
+D:\wizard game>
+
+set upstream and u are the same thing but the second is shorter
+https://github.com/Tony555x/wizard-game
