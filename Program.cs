@@ -53,6 +53,8 @@ namespace WizardGame
                     return;
                 }
             }
+            print("Ok gg");
+            Console.ReadKey();
         }
         static void print(string a){
             Console.WriteLine(a);
