@@ -30,8 +30,8 @@ namespace WizardGame
                     print($"{wizard.Spells[i].Name}");
                 }
                 print("Type spell name to cast.");
-                Console.Clear();
                 string spellName=Console.ReadLine();
+                Console.Clear();
                 for(int i=0;i<wizard.Spells.Count;i++){
                     if(wizard.Spells[i].Name==spellName){
                         print(wizard.Name+" cast "+spellName+"!");
