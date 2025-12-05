@@ -1,6 +1,6 @@
 namespace WizardGame{
     public abstract class Character{
-        public string Name => "";
+        public string Name{get;set;}
         public int HP{get;set;}
         public int MaxHP{get;set;}
         public int ATK{get;set;}
@@ -15,6 +15,9 @@ namespace WizardGame{
                 HP = 0;
             }
             Console.WriteLine($"{Name} took {finalDamage} damage.");
+        }
+        public Character(string name){
+            Name=name;
         }
     }
 }
