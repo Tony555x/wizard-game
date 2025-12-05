@@ -1,4 +1,5 @@
-﻿namespace WizardGame
+﻿using WizardGame.Enemies;
+namespace WizardGame
 {
     class Program
     {
@@ -11,17 +12,34 @@
             string name=Console.ReadLine();
             Wizard wizard=new Wizard(name);
             Console.Clear();
-            print("Type 'char' to see your stats and spells.");
-            print("Press any key to continue.");
-            Console.ReadKey();
-            Console.Clear();
             print("You have entered the forest.");
             print("Press any key to continue.");
             Console.ReadKey();
             Console.Clear();
             print("You see a goblin.");
+            print("Press any key to continue.");
+            Console.ReadKey();
+            Console.Clear();
+            Enemy enemy=new Goblin();
             while(true){
-               break; 
+                //print wizard name hp/max hp and mp/maxmp
+                print(wizard.Name+": "+wizard.HP+"/"+wizard.MaxHP+" HP "+wizard.MP+"/"+wizard.MaxMP+" MP");
+                print(enemy.Name+": "+enemy.HP+"/"+enemy.MaxHP+" HP");
+                print("Spells:");
+                for(int i=0;i<wizard.Spells.Count;i++){
+                    print($"{i+1}. {wizard.Spells[i].Name}");
+                }
+                print("Type spell name to cast.");
+                Console.Clear();
+                string spellName=Console.ReadLine();
+                for(int i=0;i<wizard.Spells.Count;i++){
+                    if(wizard.Spells[i].Name==spellName){
+                        print(wizard.Name+" cast "+spellName+"!");
+                        wizard.Spells[i].Use(wizard,enemy);
+                        break;
+                    }
+                }
+                enemy.TakeTurn(wizard);
             }
         }
         static void print(string a){
