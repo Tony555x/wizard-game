@@ -27,7 +27,7 @@ namespace WizardGame
                 print(enemy.Name+": "+enemy.HP+"/"+enemy.MaxHP+" HP");
                 print("Spells:");
                 for(int i=0;i<wizard.Spells.Count;i++){
-                    print($"{i+1}. {wizard.Spells[i].Name}");
+                    print($"{wizard.Spells[i].Name}");
                 }
                 print("Type spell name to cast.");
                 Console.Clear();
@@ -39,7 +39,19 @@ namespace WizardGame
                         break;
                     }
                 }
+                if(enemy.HP<=0){
+                    print("You defeated the goblin!");
+                    print("Press any key to continue.");
+                    Console.ReadKey();
+                    break;
+                }
                 enemy.TakeTurn(wizard);
+                if(wizard.HP<=0){
+                    print("You have been defeated.");
+                    print("Press any key to exit.");
+                    Console.ReadKey();
+                    return;
+                }
             }
         }
         static void print(string a){
