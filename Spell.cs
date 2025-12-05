@@ -3,6 +3,6 @@ namespace WizardGame{
         public string Name => "None";
         public string Description => "None";
         public int Cost => 0;
-        //public abstract void Use(Wizard wizard, Enemy enemy);
+        public abstract void Use(Wizard wizard, Enemy enemy);
     }
 }
